@@ -19,6 +19,8 @@
       <div class="topbar-right">
         <nav aria-label="Learning paths navigation">
           <a class="navlink" href="#path-1">Path 1</a>
+          <a class="navlink" href="#path-2">Path 2</a>
+          <a class="navlink" href="#path-3">Path 3</a>
         </nav>
 
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
@@ -54,17 +56,35 @@
         </span>
       </a>
 
-      <!-- Placeholder example card (remove if you don't want placeholders) -->
-      <div class="card" aria-hidden="true">
-        <span class="pill">Next paths</span>
-        <h2>Add more learning paths</h2>
+      <!-- Path 2 Card -->
+      <a class="card" href="#path-2">
+        <span class="pill">Path 2 • Azure Architecture</span>
+        <h2>Introduction to Cloud Infrastructure: Describe Azure Architecture and Services</h2>
         <p>
-          Duplicate the Path card and section blocks, then update titles and anchors (e.g., <code>#path-2</code>).
+          Azure services overview, compute, networking, storage, identity, access, and security features (Part 2 of 3).
         </p>
-        <span class="cta" style="opacity:.7; cursor:not-allowed;">
-          Coming soon
+        <span class="cta">
+          Open path
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </span>
-      </div>
+      </a>
+
+      <!-- Path 3 Card -->
+      <a class="card" href="#path-3">
+        <span class="pill">Path 3 • Azure Management</span>
+        <h2>Introduction to Cloud Infrastructure: Describe Azure Management and Governance</h2>
+        <p>
+          Cost management, governance, compliance, resource management, and monitoring tools (Part 3 of 3).
+        </p>
+        <span class="cta">
+          Open path
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
     </div>
 
     <!-- Path 1 Section -->
@@ -116,7 +136,140 @@
       </div>
     </section>
 
-    <footer>
+    <!-- Path 2 Section -->
+    <section id="path-2">
+      <div class="section-head">
+        <div>
+          <h3>Path 2 — Introduction to Cloud Infrastructure: Describe Azure Architecture and Services</h3>
+          <div class="meta">Microsoft Learn Modules</div>
+        </div>
+        <a class="navlink" href="#top" title="Back to top">↑ Back to top</a>
+      </div>
+
+      <div class="section-body">
+        <!-- MODULE 1 -->
+        <h4>1. Describe the core architectural components of Azure</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/2-what-microsoft-azure/" target="_blank" rel="noopener noreferrer">What is Microsoft Azure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/3-get-started-azure-accounts/" target="_blank" rel="noopener noreferrer">Get started with Azure accounts</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/4-exercise-explore-learn-sandbox/" target="_blank" rel="noopener noreferrer">Exercise - Explore interacting with Azure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure/" target="_blank" rel="noopener noreferrer">Describe Azure physical infrastructure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure/" target="_blank" rel="noopener noreferrer">Describe Azure management infrastructure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/7-exercise-create-azure-resource/" target="_blank" rel="noopener noreferrer">Exercise - Create an Azure resource</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/8-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/9-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 2 -->
+        <h4 style="margin-top:25px;">2. Describe Azure compute and networking services</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines/" target="_blank" rel="noopener noreferrer">Describe Azure virtual machines</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/3-exercise-create-azure-virtual-machine/" target="_blank" rel="noopener noreferrer">Exercise - Create an Azure virtual machine</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop/" target="_blank" rel="noopener noreferrer">Describe Azure virtual desktop</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/5-containers/" target="_blank" rel="noopener noreferrer">Describe Azure containers</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions/" target="_blank" rel="noopener noreferrer">Describe Azure functions</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/7-describe-application-hosting-options/" target="_blank" rel="noopener noreferrer">Describe application hosting options</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/8-virtual-network/" target="_blank" rel="noopener noreferrer">Describe Azure virtual networking</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/9-exercise-configure-network-access/" target="_blank" rel="noopener noreferrer">Exercise - Create an Azure Virtual Machine and Configure network access</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/10-virtual-private-networks/" target="_blank" rel="noopener noreferrer">Describe Azure virtual private networks</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/11-expressroute/" target="_blank" rel="noopener noreferrer">Describe Azure ExpressRoute</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/12-domain-name-system/" target="_blank" rel="noopener noreferrer">Describe Azure DNS</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/13-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/14-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 3 -->
+        <h4 style="margin-top:25px;">3. Describe Azure storage services</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts/" target="_blank" rel="noopener noreferrer">Describe Azure storage accounts</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy/" target="_blank" rel="noopener noreferrer">Describe Azure storage redundancy</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services/" target="_blank" rel="noopener noreferrer">Describe Azure storage services</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/5-exercise-create-storage-blob/" target="_blank" rel="noopener noreferrer">Exercise - Create a storage blob</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options/" target="_blank" rel="noopener noreferrer">Identify Azure data migration options</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options/" target="_blank" rel="noopener noreferrer">Identify Azure file movement options</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/8-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/9-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 4 -->
+        <h4 style="margin-top:25px;">4. Describe Azure identity, access, and security</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/2-directory-services/" target="_blank" rel="noopener noreferrer">Describe Azure directory services</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/3-authentication-methods/" target="_blank" rel="noopener noreferrer">Describe Azure authentication methods</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/4-external-identities/" target="_blank" rel="noopener noreferrer">Describe Azure external identities</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/5-conditional-access/" target="_blank" rel="noopener noreferrer">Describe Azure conditional access</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control/" target="_blank" rel="noopener noreferrer">Describe Azure role-based access control</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model/" target="_blank" rel="noopener noreferrer">Describe Zero Trust model</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth/" target="_blank" rel="noopener noreferrer">Describe defense-in-depth</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/9-describe-microsoft-defender-for-cloud/" target="_blank" rel="noopener noreferrer">Describe Microsoft Defender for Cloud</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Path 3 Section -->
+    <section id="path-3">
+      <div class="section-head">
+        <div>
+          <h3>Path 3 — Introduction to Cloud Infrastructure: Describe Azure Management and Governance</h3>
+          <div class="meta">Microsoft Learn Modules</div>
+        </div>
+        <a class="navlink" href="#top" title="Back to top">↑ Back to top</a>
+      </div>
+
+      <div class="section-body">
+        <!-- MODULE 1 -->
+        <h4>1. Describe cost management in Azure</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure/" target="_blank" rel="noopener noreferrer">Describe factors that can affect costs in Azure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/3-compare-pricing-total-cost-of-ownership-calculators/" target="_blank" rel="noopener noreferrer">Explore the pricing calculator</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/4-exercise-estimate-workload-costs-use-pricing-calculator/" target="_blank" rel="noopener noreferrer">Exercise - Estimate workload costs by using the Pricing calculator</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool/" target="_blank" rel="noopener noreferrer">Describe the Microsoft Cost Management tool</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags/" target="_blank" rel="noopener noreferrer">Describe the purpose of tags</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/8-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/9-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 2 -->
+        <h4 style="margin-top:25px;">2. Describe features and tools in Azure for governance and compliance</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview/" target="_blank" rel="noopener noreferrer">Describe the purpose of Microsoft Purview</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy/" target="_blank" rel="noopener noreferrer">Describe the purpose of Azure Policy</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks/" target="_blank" rel="noopener noreferrer">Describe the purpose of resource locks</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/5-exercise-configure-resource-lock/" target="_blank" rel="noopener noreferrer">Exercise - Configure a resource lock</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/6-describe-purpose-service-trust-portal/" target="_blank" rel="noopener noreferrer">Describe the purpose of the Service Trust portal</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/7-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/8-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 3 -->
+        <h4 style="margin-top:25px;">3. Describe features and tools for managing and deploying Azure resources</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure/" target="_blank" rel="noopener noreferrer">Describe tools for interacting with Azure</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/3-describe-purpose-of-azure-arc/" target="_blank" rel="noopener noreferrer">Describe the purpose of Azure Arc</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates/" target="_blank" rel="noopener noreferrer">Describe Azure Resource Manager and Azure ARM templates</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/5-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/6-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+
+        <!-- MODULE 4 -->
+        <h4 style="margin-top:25px;">4. Describe monitoring tools in Azure</h4>
+        <ul class="module-list">
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/1-introduction/" target="_blank" rel="noopener noreferrer">Introduction</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor/" target="_blank" rel="noopener noreferrer">Describe the purpose of Azure Advisor</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health/" target="_blank" rel="noopener noreferrer">Describe Azure Service Health</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor/" target="_blank" rel="noopener noreferrer">Describe Azure Monitor</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/5-knowledge-check/" target="_blank" rel="noopener noreferrer">Module assessment</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/6-summary/" target="_blank" rel="noopener noreferrer">Summary</a></li>
+        </ul>
+      </div>
+    </section>
       <span>© <span id="year"></span> Learning Hub</span>
       <span>Hosted on GitHub pages.</span>
     </footer>
