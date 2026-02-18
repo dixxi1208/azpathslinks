@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Microsoft Course Learning Paths</title>
+  <meta name="description" content="Landing page with navigation for Microsoft course learning paths." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#101a2f;
+      --panel2:#0f1a33;
+      --text:#e9eefc;
+      --muted:#aeb9d6;
+      --brand:#4f8cff;
+      --brand2:#7aa7ff;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1100px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(79,140,255,.25), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(122,167,255,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .container{ max-width:var(--max); margin:0 auto; padding: 28px 18px 56px; }
+
+    /* Top nav */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 18, 32, 0.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding: 12px 18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .brand-badge{
+      width:34px; height:34px;
+      border-radius:10px;
+      background: linear-gradient(135deg, rgba(79,140,255,.95), rgba(122,167,255,.75));
+      box-shadow: 0 8px 20px rgba(79,140,255,.25);
+    }
+    nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navlink{
+      font-size: 14px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      transition: .15s ease;
+    }
+    .navlink:hover{
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 34px 0 18px;
+      display:grid;
+      gap:14px;
+    }
+    .hero h1{
+      margin:0;
+      font-size: clamp(26px, 3.2vw, 40px);
+      line-height:1.15;
+    }
+    .hero p{
+      margin:0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    /* Grid of paths */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .card{
+      grid-column: span 6;
+      background: linear-gradient(180deg, rgba(16,26,47,.92), rgba(15,26,51,.88));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      transition: transform .12s ease, border-color .12s ease;
+      overflow:hidden;
+      position:relative;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(79,140,255,.45);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size: 12px;
+      color: var(--text);
+      background: rgba(79,140,255,.16);
+      border: 1px solid rgba(79,140,255,.35);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .card h2{
+      margin: 12px 0 6px;
+      font-size: 18px;
+      line-height:1.25;
+    }
+    .card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight: 600;
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      transition: .15s ease;
+      width: fit-content;
+    }
+    .cta:hover{
+      border-color: rgba(79,140,255,.45);
+      background: rgba(79,140,255,.12);
+    }
+    .arrow{
+      width: 18px; height: 18px;
+      display:inline-block;
+      transform: translateY(1px);
+    }
+
+    /* Sections */
+    section{
+      margin-top: 26px;
+      border-top: 1px solid var(--border);
+      padding-top: 22px;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .section-head h3{
+      margin:0;
+      font-size: 20px;
+    }
+    .section-head .meta{
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .section-body{
+      margin-top: 12px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .card{ grid-column: span 12; }
+    }
+	.module-list {
+	  margin-top: 8px;
+	  padding-left: 18px;
+	}
+
+	.module-list li {
+	  margin-bottom: 6px;
+	}
+
+	.module-list a {
+	  color: var(--brand2);
+	  text-decoration: none;
+	  transition: 0.2s ease;
+	}
+
+	.module-list a:hover {
+	  text-decoration: underline;
+	  color: var(--brand);
+	}
+
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>Microsoft Course Learning Paths</span>
+      </a>
+
+      <nav aria-label="Learning paths navigation">
+        <a class="navlink" href="#path-1">Path 1</a>
+        <!-- Add more nav links as you add paths:
+        <a class="navlink" href="#path-2">Path 2</a>
+        -->
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="hero">
+      <h1>Learning Paths</h1>
+      <p>
+        Use this page as a simple landing hub with quick navigation to each Microsoft course learning path.
+        Add more paths by copying the card + section blocks.
+      </p>
+    </div>
+
+    <div class="grid" aria-label="Learning paths list">
+      <!-- Path 1 Card -->
+      <a class="card" href="#path-1">
+        <span class="pill">Path 1 • Cloud Infrastructure</span>
+        <h2>Introduction to Cloud Infrastructure: Describe cloud concepts</h2>
+        <p>
+          Core cloud vocabulary and fundamentals (benefits, service models, deployment models, and shared responsibility).
+        </p>
+        <span class="cta">
+          Open path
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Placeholder example card (remove if you don't want placeholders) -->
+      <div class="card" aria-hidden="true">
+        <span class="pill">Next paths</span>
+        <h2>Add more learning paths</h2>
+        <p>
+          Duplicate the Path card and section blocks, then update titles and anchors (e.g., <code>#path-2</code>).
+        </p>
+        <span class="cta" style="opacity:.7; cursor:not-allowed;">
+          Coming soon
+        </span>
+      </div>
+    </div>
+
+    <!-- Path 1 Section -->
+	<section id="path-1">
+	  <div class="section-head">
+		<div>
+		  <h3>Path 1 — Introduction to Cloud Infrastructure: Describe cloud concepts</h3>
+		  <div class="meta">Microsoft Learn Modules</div>
+		</div>
+		<a class="navlink" href="#top" title="Back to top">↑ Back to top</a>
+	  </div>
+
+	  <div class="section-body">
+
+		<!-- MODULE 1 -->
+		<h4>1. Describe Cloud Concepts</h4>
+		<ul class="module-list">
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/1-introduction-microsoft-azure-fundamentals" target="_blank">Introduction to Microsoft Azure Fundamentals</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/2-introduction-cloud-compute" target="_blank">Introduction to cloud computing</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute" target="_blank">What is cloud computing</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model" target="_blank">Describe the shared responsibility model</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models" target="_blank">Define cloud models</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model" target="_blank">Describe the consumption-based model</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/7-knowledge-check" target="_blank">Module assessment</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/8-summary" target="_blank">Summary</a></li>
+		</ul>
+
+		<!-- MODULE 2 -->
+		<h4 style="margin-top:25px;">2. Describe the benefits of using cloud services</h4>
+		<ul class="module-list">
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/1-introduction" target="_blank">Introduction</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud" target="_blank">Describe the benefits of high availability and scalability</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud" target="_blank">Describe the benefits of reliability and predictability</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud" target="_blank">Describe the benefits of security and governance</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud" target="_blank">Describe the benefits of manageability</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/6-knowledge-check" target="_blank">Module assessment</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/7-summary" target="_blank">Summary</a></li>
+		</ul>
+
+		<!-- MODULE 3 -->
+		<h4 style="margin-top:25px;">3. Describe cloud service types</h4>
+		<ul class="module-list">
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/1-introduction" target="_blank">Introduction</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service" target="_blank">Describe Infrastructure as a Service (IaaS)</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service" target="_blank">Describe Platform as a Service (PaaS)</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service" target="_blank">Describe Software as a Service (SaaS)</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/5-knowledge-check" target="_blank">Module assessment</a></li>
+		  <li><a href="https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/6-summary" target="_blank">Summary</a></li>
+		</ul>
+
+	  </div>
+	</section>
+
+
+    <footer>
+      <span>© <span id="year"></span> Learning Hub</span>
+      <span>Hosted on GitHub pages.</span>
+    </footer>
+  </main>
+
+  <script>
+    // Simple dynamic year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Optional: smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.pushState(null, "", id);
+      });
+    });
+  </script>
+</body>
+</html>
